@@ -40,8 +40,25 @@ public class UselessHack extends Application implements EventHandler
 		window.setOnCloseRequest(e -> closeProgram(window));
 		
 		//All the buttons to navigate
-		Button rButton = new Button("Remove a station");
-		rButton.setOnAction(e -> buttonClicked(window));
+		Button button1 = new Button("hey!");
+		button1.setOnAction(e -> buttonClicked(window));
+		
+		Button button2 = new Button("you!");
+		button2.setOnAction(e -> buttonClicked(window));
+		
+		//Top layout
+		HBox topLayout = new HBox(20);
+		topLayout.getChildren().addAll(text);
+		
+		//Border pane
+		BorderPane pane = new BorderPane();
+		pane.setTop(topLayout);
+		
+		mainPage = new Scene(pane, 400, 400);
+		
+		window.setScene(mainPage);
+		window.setTitle("CTA Stop App");
+		window.show();
 		
 	}
 	
