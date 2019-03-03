@@ -32,9 +32,27 @@ public class UselessHack extends Application implements EventHandler
 	}
 
 	@Override
-	public void start(Stage arg0) throws Exception
+	public void start(Stage window) throws Exception
 	{
-		// TODO Auto-generated method stub
+		Label text = new Label("Welcome to the first screen");
+		
+		//To properly close when the X on top is pressed
+		window.setOnCloseRequest(e -> closeProgram(window));
+		
+		//All the buttons to navigate
+		Button rButton = new Button("Remove a station");
+		rButton.setOnAction(e -> buttonClicked(window));
+		
+	}
+	
+	public void closeProgram(Stage window)
+	{
+		//Closes the window
+		window.close();
+	}
+	
+	public void buttonClicked(Stage window)
+	{
 		
 	}
 
