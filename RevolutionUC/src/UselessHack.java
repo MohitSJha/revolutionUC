@@ -60,6 +60,17 @@ public class UselessHack extends Application implements EventHandler
 		window.setTitle("CTA Stop App");
 		window.show();
 		
+		
+		Label sdTxt = new Label("Looks like you've made it this far");
+		Button trick = new Button("Click on me");
+		Button trick2 = new Button("No Click me");
+		HBox h1 = new HBox();
+		BorderPane pane1 = new BorderPane();
+		pane1.setTop(topLayout);
+		
+		
+		firstPage = new Scene(pane,400, 800);
+		
 	}
 	
 	public void closeProgram(Stage window)
