@@ -46,31 +46,29 @@ public class UselessHack extends Application implements EventHandler
 		Button button2 = new Button("you!");
 		button2.setOnAction(e -> buttonClicked(window));
 		
+		Button button3 = new Button("you!");
+		button2.setOnAction(e -> buttonClicked(window));
+		
 		//Top layout
 		HBox topLayout = new HBox(20);
 		topLayout.getChildren().addAll(text);
 		
+		//Layout for the options
+		VBox options = new VBox();
+		options.getChildren().addAll(button1, button2, button3);
+		
 		//Border pane
 		BorderPane pane = new BorderPane();
 		pane.setTop(topLayout);
+		pane.setCenter(options);
 		
-		mainPage = new Scene(pane, 400, 400);
+		mainPage = new Scene(pane, 400, 800);
 		
 		window.setScene(mainPage);
-		window.setTitle("CTA Stop App");
+		window.setTitle("Revolution! UC!!");
 		window.show();
 		
 	}
 	
-	public void closeProgram(Stage window)
-	{
-		//Closes the window
-		window.close();
-	}
 	
-	public void buttonClicked(Stage window)
-	{
-		
-	}
-
 }
